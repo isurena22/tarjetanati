@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(https://img.freepik.com/vector-premium/abstract-gradiente-colores-saturados-diseno-versatil-vectorial-eps_1157954-182.jpg);
+    background-size: cover; /* Hace que la imagen de fondo ocupe toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h2 {
+    text-align: justify;
+    font-size: 1.5em;
+    font-family: monospace;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);   
+    margin:15px 0;
+}
+
+h3 {
+    text-align: center;
+    font-style: italic;
+    font: weight 800px;;
+    font-size: 2em;
+    color: rgb(72, 10, 114);
+    margin: 15px 0;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.8em;
+    color: rgb(226, 35, 108);   
+    margin:15px 0;
+
+}
+
+.btn-group {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button {
+    position: absolute;
+    width: 150px;
+    height: inherit;
+    color: white;
+    font-size: 1.3em;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px gray;
+    border: 2px solid hotpink;
+}
+
+button:nth-child(1) {
+    margin-left: -200px;
+    background: hotpink;
+}
+
+button:nth-child(2) {
+    margin-right: -200px;
+    background: blue;
+    color: white;
+    border: 2px solid blue;
+}
+
+.floating-heart {
+    position: absolute;
+    width: 300px;
+    animation: floatHeart 6s ease-in-out infinite;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.song-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.song-text {
+    text-align: center;
+    color: hotpink;
+    font-size: 2em;
+}
+
+.song-section iframe {
+    margin-top: 10px;
+}
+
+.proposal-section {
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.proposal-section h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: hotpink;
+    margin-bottom: 10px;
+}
+
+.proposal-section h4 {
+    font-size: 1.5em;
+    font-weight: 700;
+    font-style: italic;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.proposal-section .btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.proposal-section .btn-group button {
+    width: 100px;
+    height: 60px;
+    margin: 0 10px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px gray;
+}
+
+.proposal-section .btn-group button:nth-child(1) {
+   margin-left: -200px;
+    background-color: hotpink;
+    border: 2px solid hotpink;
+    color: white;
+}
+
+.proposal-section .btn-group button:nth-child(2) {
+   margin-right: -200px;
+    background-color: blue;
+    border: 2px solid blue;
+    color: white;
+}
+
+.card-section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+.card-cover {
+    cursor: pointer;
+    margin-top: 0; /* La imagen empieza desde el margen superior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cover-image {
+    width: 80%; /* Ajusta el tamaño de la imagen de portada */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.cover-text {
+    font-size: 34px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    color: rgb(125, 3, 173); /* Color del texto */
+    text-align: center; /* Centra el texto */
+}
+
+.card-content {
+    display: none; /* Oculto inicialmente */
+    flex-direction: row; /* Alinea las imágenes horizontalmente */
+    justify-content: center; /* Centra las imágenes en la pantalla */
+    align-items: center; /* Alinea las imágenes verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier padding */
+}
+
+.card-details {
+    display: flex;
+    justify-content: flex-start; /* Alinea las imágenes al principio sin espacio entre ellas */
+    align-items: center; /* Alinea las imágenes al centro verticalmente */
+    width: 100%; /* Aprovecha todo el ancho disponible */
+    height: 100%; /* Aprovecha toda la altura disponible */
+    position: absolute; /* Asegura que las imágenes se posicionen respecto a la ventana */
+    top: 10px; /* Ajusta la posición para un margen superior */
+    left: 0; /* Alinea las imágenes al borde izquierdo */
+    margin: 0; /* Elimina el margen */
+}
+
+.left-side, .right-side {
+    width: 50%; /* Cada imagen ocupará la mitad del contenedor */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    margin-top: 10%;
+    margin-bottom: 0%;
+    display: flex;
+    justify-content: center; /* Centra las imágenes dentro de su contenedor */
+    align-items: center; /* Alinea las imágenes verticalmente dentro de su contenedor */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+}
+
+.left-side {
+    margin-left: 17%; /* Margen izquierdo para alejar la imagen izquierda del borde */
+}
+
+.right-side {
+    margin-right: 16%; /* Margen derecho para alejar la imagen derecha del borde */
+}
+
+.flower-image, .beautiful-image {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho disponible de su contenedor */
+    height: 100vh; /* Las imágenes ocuparán toda la altura de la ventana */
+    object-fit: contain; /* Asegura que las imágenes se ajusten sin distorsionarse */
+}
